@@ -7,7 +7,7 @@ import '@mdi/font/css/materialdesignicons.min.css';
 
 Vue.use(Vuetify);
 
-const withVuetify = makeDecorator({
+export default makeDecorator({
   name: 'withVuetify',
   parameterName: 'vuetify',
   wrapper: (storyFn, context, { parameters = {} }) => {
@@ -28,5 +28,3 @@ const withVuetify = makeDecorator({
     });
   }
 });
-
-export { withVuetify };
