@@ -9,7 +9,11 @@ storiesOf('VIcon', module)
       <v-icon large>mdi-home</v-icon>
       <v-icon x-large>mdi-home</v-icon>
     </div>
-  `)
+  `, {
+    eyes: {
+      variations: ['dark']
+    }
+  })
   .add('dark', () => `
     <div>
       <v-icon dark>mdi-home</v-icon>

@@ -24,5 +24,5 @@ export default function setup(fixtureName, storyUrl, callback) {
     })
     .after(async () => eyes.waitForResults())
 
-  callback({ test, eyes })
+  callback((name, cb) => test(name, async t => cb(t, eyes)))
 }

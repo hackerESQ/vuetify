@@ -1,5 +1,5 @@
 import { configure, addDecorator, storiesOf } from '@storybook/vue'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean, number, object, array, select } from '@storybook/addon-knobs'
 import { withA11y } from '@storybook/addon-a11y'
 import { withTemplate } from '~storybook/addon-show-vue-markup'
 import { withVuetify } from '~storybook/decorator'
@@ -28,7 +28,16 @@ function loadStories() {
   const keysVue = reqVue.keys()
   for (let i = 0; i < keysVue.length; i++) {
     const filename = keysVue[i]
-    registerStories(reqVue, filename, storiesOf, {})
+    registerStories(reqVue, filename, storiesOf, {
+      knobs: {
+        text,
+        boolean,
+        number,
+        object,
+        array,
+        select
+      }
+    })
   }
 
   const keysIndex = reqIndex.keys()

@@ -5,5 +5,6 @@ module.exports = {
   batchName,
   browser: [
     { width: 800, height: 600, name: 'chrome' }
-  ]
+  ],
+  waitBeforeScreenshots: 200
 }
